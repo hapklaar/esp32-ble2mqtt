@@ -1,15 +1,42 @@
 {
-  "wifi": {
-    "ssid": "MY_SSID",
-    "password": "MY_PASSWORD"
-  },
-  "mqtt": {
-    "server": {
-      "host": "192.168.1.1",
-      "port": 1883
-    },
-    "publish": {
-      "retain": true
-    }
-  }
+	"wifi": {
+		"ssid": "MY_SSID",
+		"password": "MY_PASSWORD"
+	},
+	"mqtt": {
+		"server": {
+			"host": "192.168.1.1",
+			"port": 1883
+		},
+		"publish": {
+			"qos": 0,
+			"retain": true
+		},
+		"topics" :{
+			"prefix": "",
+			"get_suffix": "/Get",
+			"set_suffix": "/Set"
+		}
+	},
+	"ble": {
+		"whitelist": [
+			"c5:11:8c:ba:55:ef"
+			],
+		"services": {
+			"definitions": {}
+			},
+			"whitelist": []
+		},
+		"characteristics": {
+			"definitions": {}
+			},
+			"//Optional: 'whitelist' or 'blacklist'": []
+		},
+		"passkeys": {}
+	},
+	"log": {
+    "ip": "192.168.1.1",
+    "port": 5000
+	}
+
 }
