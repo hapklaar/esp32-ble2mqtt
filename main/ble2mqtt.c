@@ -231,7 +231,7 @@ static void ble_on_device_discovered(mac_addr_t mac)
     if (!connect)
         return;
 
-    ble_connect(mac);
+//    ble_connect(mac); Don't connect, just scan.
 }
 
 static void ble_on_device_connected(mac_addr_t mac)
